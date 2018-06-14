@@ -1,0 +1,55 @@
+{
+  "servers": [
+    {
+      "id": 1,
+      "name": "debian-production",
+      "cores": 2,
+      "memory": 4096,
+      "power_on": true,
+      "discs": [
+        {
+          "id": 1,
+          "grade": "ssd",
+          "size": 25600,
+          "order": 1
+        },
+        {
+          "id": 2,
+          "grade": "archive",
+          "size": 51200,
+          "order": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "debian-development",
+      "cores": 1,
+      "memory": 2048,
+      "power_on": false,
+      "discs": [
+        {
+          "id": 3,
+          "grade": "ssd",
+          "size": 51200,
+          "order": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "debian-testing",
+      "cores": 1,
+      "memory": 2048,
+      "power_on": true,
+      "discs": [
+        {
+          "id": 4,
+          "grade": "ssd",
+          "size": 25600,
+          "order": 1
+        }
+      ]
+    }
+  ]
+}

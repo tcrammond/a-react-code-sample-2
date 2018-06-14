@@ -1,0 +1,152 @@
+@charset 'utf-8';
+
+// Normalize
+@import '~normalize';
+
+// Open Sans
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+// Bulma library
+@import "../node_modules/bulma/bulma";
+
+// [Company] Colours
+$color__blue: #004ea4;
+$color__blue--light: #3596d7;
+$color__yellow: #f8ed05;
+$color__red: #dc2a2f;
+$color__green: #079d58;
+$color__grey: #e3e3e3;
+$color__grey--light: #ededed;
+$color__grey--lighter: #f2f2f2;
+$color__grey--dark: #777;
+$color__black: #231f20;
+
+
+
+// App css
+// in the interest of time it's all here in one file.
+.ServerList {
+  > .Server:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+$server_padding: .5rem;
+.Server {
+  padding: $server_padding;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; // Wrap the toggle under the title in case of small mobile viewport
+
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: $server_padding;
+  }
+
+  &__disksList {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  &__attributes {
+    .icon {
+      margin-right: .25rem;
+    }
+  }
+
+  &--off {
+    background-color: rgba(195, 195, 195, 0.1)
+  }
+}
+
+.Disk {
+  display: flex;
+  padding: .25rem;
+
+  .icon {
+    margin-right: .25rem;
+  }
+}
+
+.PowerToggle {
+  // Appearance defaults to "on"
+  .PowerToggle__status {
+    color: $color__green;
+  }
+  .PowerToggle__toggle {
+    color: $color__red;
+  }
+
+  &--off {
+    .PowerToggle__status {
+      color: $color__red;
+    }
+    .PowerToggle__toggle {
+      color: $color__green;
+    }
+  }
+}
+
+
+// default provided css
+html {
+  font-size: 16px;
+  @media (min-width: 800px) {
+    font-size: 18px;
+  }
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $color__black;
+  font-size: 1rem;
+}
+
+.company-container {
+  max-width: 1024px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.company-header {
+  border-top: 0.5rem solid $color__blue;
+  border-bottom: 1px solid $color__grey;
+  margin-bottom: 1rem;
+  height: 4rem;
+  min-width: 320px;
+  &__title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.7rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+  }
+  &__logo,
+  &__logo--mobile {
+    width: 11rem;
+    min-width: 11rem;
+    height: 4rem;
+    display: none;
+    margin-right: 0.75rem;
+  }
+  &__logo--mobile {
+    display: block;
+    width: 2rem;
+    min-width: 2rem;
+  }
+  &__logo-svg,
+  &__logo--mobile-svg {
+    fill: $color__blue;
+  }
+
+  @media (min-width: 480px) {
+    &__logo {
+      display: block;
+    }
+    &__logo--mobile {
+      display: none;
+    }
+  }
+}
