@@ -16,17 +16,17 @@ I installed the following additional modules/libraries:
 
 #### commit history (after sanitizing)
 
-Install axios, bulma
-Add API module
-Import bulma css, update index with meta tag
-Add dumb ServerList component tree; fetch servers on app mount"
-Include fontawesome in index.html
-[Task 1] Update ServerList/Server to display server information
-Add PowerToggle UI to Server
-Hook up PowerToggle functionality; style tweaks
-Clean up
-Server style improvements
-Refactor icons to common component
-Improve some docs/comments
-Add DEMO.md
+- Install axios, bulma
+- Add API module
+- Import bulma css, update index with meta tag
+- Add dumb ServerList component tree; fetch servers on app mount"
+- Include fontawesome in index.html
+- [Task 1] Update ServerList/Server to display server information
+- Add PowerToggle UI to Server
+- Hook up PowerToggle functionality; style tweaks
+- Clean up
+- Server style improvements
+- Refactor icons to common component
+- Improve some docs/comments
+- Add DEMO.md
 
